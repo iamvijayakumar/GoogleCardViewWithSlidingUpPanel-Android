@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DemoActivity" >
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        xmlns:sothree="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        sothree:panelHeight="278dp"
+        sothree:shadowHeight="4dp"
+        sothree:paralaxOffset="50dp"
+        sothree:dragView="@+id/dragView">
+
+        <!-- MAIN CONTENT -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+          
+            <TextView
+                android:id="@+id/main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:gravity="center"
+                android:text="Main Content"
+                android:clickable="true"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:textSize="16sp" />
+        </FrameLayout>
+
+        <!-- SLIDING LAYOUT -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#eeeeee"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="false"
+            android:id="@+id/dragView">
+  <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+            <ListView
+         android:id="@+id/activity_googlecards_listview"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:background="#e2e2e2"
+         android:clipToPadding="false"
+         android:divider="@null"
+         android:focusable="false"
+         android:focusableInTouchMode="false"
+         android:dividerHeight="8dp"
+         android:fadingEdge="none"
+         android:fitsSystemWindows="true"
+         android:padding="12dp"
+         android:scrollbarStyle="outsideOverlay"
+        >
+     </ListView>
+        </LinearLayout>
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+</RelativeLayout>
+
